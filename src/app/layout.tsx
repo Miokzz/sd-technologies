@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   publisher: "S&D Technologies",
   alternates: { canonical: "/" },
   icons: {
-    icon: [{ url: "/icon.png", type: "image/png" }],
-    apple: [{ url: "/icon.png" }],
+    icon: [{ url: "/brand/mark.webp", type: "image/webp" }],
+    apple: [{ url: "/brand/mark.webp" }],
   },
   openGraph: {
     type: "website",
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     siteName: "S&D Technologies",
     title: "S&D Technologies | Tecnologia e soluções digitais",
     description: siteConfig.description,
-    images: [{ url: "/brand/og-image.jpg", width: 1200, height: 630, alt: "S&D Technologies" }],
+    images: [{ url: "/brand/logo.webp", width: 1254, height: 1254, alt: "S&D Technologies" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "S&D Technologies | Tecnologia e soluções digitais",
     description: siteConfig.description,
-    images: ["/brand/og-image.jpg"],
+    images: ["/brand/logo.webp"],
   },
   robots: { index: true, follow: true },
 };
