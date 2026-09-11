@@ -18,7 +18,7 @@ export default function Home() {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/brand/logo.png`,
+    logo: `${siteConfig.url}/brand/logo.webp`,
     description: siteConfig.description,
     founder: siteConfig.founders.map((name) => ({ "@type": "Person", name })),
   };

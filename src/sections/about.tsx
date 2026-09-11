@@ -26,7 +26,7 @@ export function About() {
         <div className="about-grid">
           <Reveal className="founders-card" delay={0.05}>
             <div className="founders-card__top">
-              <Image src="/brand/mark.png" alt="" width={130} height={98} />
+              <Image src="/brand/mark.webp" alt="" width={130} height={98} />
               <span>Founders / 02</span>
             </div>
             <div className="founder-name"><span>01</span><strong>Samuel</strong></div>

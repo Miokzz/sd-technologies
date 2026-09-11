@@ -9,7 +9,7 @@ export function BrandMark({ className = "", priority = false }: BrandMarkProps) 
   return (
     <span className={`brand-mark ${className}`} aria-label="S&D Technologies">
       <Image
-        src="/brand/mark.png"
+        src="/brand/mark.webp"
         alt="Símbolo oficial da S&D Technologies"
         width={260}
         height={196}

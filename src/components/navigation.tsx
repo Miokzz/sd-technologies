@@ -33,7 +33,7 @@ export function Navigation() {
     >
       <div className="nav-shell">
         <a className="nav-brand" href="#inicio" aria-label="S&D Technologies, início">
-          <Image src="/brand/mark.png" alt="" width={58} height={44} priority />
+          <Image src="/brand/mark.webp" alt="" width={58} height={44} priority />
           <span>S&amp;D <strong>Technologies</strong></span>
         </a>
 

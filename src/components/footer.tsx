@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Image src="/brand/mark.png" alt="" width={72} height={54} />
+          <Image src="/brand/mark.webp" alt="" width={72} height={54} />
           <div>
             <strong>S&amp;D Technologies</strong>
             <span>Samuel &amp; David</span>

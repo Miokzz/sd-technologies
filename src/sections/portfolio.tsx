@@ -14,7 +14,7 @@ export function Portfolio() {
           <p>Este espaço será preenchido apenas com trabalhos reais, publicados e verificáveis. Até lá, o próprio site da S&amp;D mostra o padrão de critério, tecnologia e acabamento que queremos levar a cada projeto.</p>
         </Reveal>
         <Reveal className="portfolio-seal" delay={0.12}>
-          <Image src="/brand/mark.png" alt="" width={160} height={120} />
+          <Image src="/brand/mark.webp" alt="" width={160} height={120} />
           <span>WORK / IN / PROGRESS</span>
         </Reveal>
       </div>

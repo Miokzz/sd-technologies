@@ -33,7 +33,7 @@ export function HeroVisual() {
       <div className="hero-visual__index" aria-hidden="true">S&amp;D / 26</div>
       <motion.div className="hero-visual__mark" style={reduce ? undefined : { x: markX, y: markY }}>
         <Image
-          src="/brand/mark.png"
+          src="/brand/mark.webp"
           alt="Símbolo S&D Technologies"
           width={760}
           height={560}
