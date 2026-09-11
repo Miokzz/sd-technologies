@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "S&D Technologies",
     title: "S&D Technologies | Tecnologia e soluções digitais",
     description: siteConfig.description,
-    images: [{ url: "/brand/logo.webp", width: 1254, height: 1254, alt: "S&D Technologies" }],
+    images: [{ url: "/brand/logo.webp", width: 800, height: 800, alt: "S&D Technologies" }],
   },
   twitter: {
     card: "summary_large_image",
