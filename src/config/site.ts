@@ -1,5 +1,14 @@
 import type { FaqItem, ProcessStep, Service } from "@/types/site";
 
+function resolveSiteUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+
+  const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+  if (vercelHost) return `https://${vercelHost}`;
+
+  return "http://localhost:3000";
+}
+
 export const siteConfig = {
   name: "S&D Technologies",
   shortName: "S&D",
@@ -8,7 +17,7 @@ export const siteConfig = {
   slogan: "Tecnologia que coloca sua empresa no próximo nível.",
   description:
     "A S&D Technologies cria experiências digitais modernas para empresas que querem uma presença online à altura do próprio negócio.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
+  url: resolveSiteUrl(),
   contact: {
     email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_URL || "",
