@@ -17,18 +17,29 @@ Pesquisa complementar: [Dribbble](https://dribbble.com/shots/popular), [21st.dev
 ## Sistema visual
 
 - Manrope variável: estrutura e peso ajustável. Instrument Serif: contraponto humano, com uso pontual de itálico.
-- Papel `#f4f3ed`, tinta `#181a1c`, azul `#074cde`, cinzas esverdeados para pausas na leitura.
-- Diagonais, curvas longas e recortes derivam do símbolo oficial. A imagem oficial é preservada; não há novo logotipo.
+- Papel `#f5f4ef`, tinta `#172027`, azul `#0754dd`, cinzas esverdeados para pausas na leitura.
+- Curvas longas e diagonais derivam do símbolo oficial. A imagem oficial é preservada dentro do SVG de transparência; não há novo logotipo.
 - O encontro de Samuel e David aparece na composição da marca, no `&`, no texto e no encerramento.
 - Serviços em elementos `details` nativos. Processo organizado pelo que o cliente acompanha e recebe, sem timeline de círculos.
 
 ## Movimento
 
-Movimento curto, preciso e com desaceleração: `cubic-bezier(.22,1,.36,1)`. A marca acompanha discretamente o scroll; a composição tipográfica recorta e assenta seus elementos. Nenhum loop permanente. Scroll nativo, animações fora de viewport pausadas, listeners removidos ao desmontar. `prefers-reduced-motion` elimina animações e transições e mantém todo o conteúdo legível.
+Movimento curto, preciso e com desaceleração: `cubic-bezier(.22,1,.36,1)`. A marca assenta ao entrar em cena. O parallax foi removido para impedir colisões com a legenda durante o scroll. O observador deixa de observar cada elemento após sua entrada. Nenhum loop permanente, recorte de texto ou conteúdo inicialmente invisível. `prefers-reduced-motion` elimina animações e transições e mantém todo o conteúdo legível.
 
 ## Capacidade
 
-Composição da própria S&D, explicitamente identificada como experimento. Formatos alteram a largura real; container queries reorganizam texto e símbolo. Peso modifica a fonte variável. Temas trocam cores com contraste. Repetição de movimento e reset funcionam por estado React. Não há site fictício, mockup de navegador ou cliente inventado.
+Composição da própria S&D, explicitamente identificada como experimento. Formatos alteram largura e proporção reais. Grids reservam espaços independentes para texto, marca e legendas; unidades de container dimensionam a tipografia. Os controles ficam ao lado da prévia no desktop e acima dela no celular. Peso modifica a fonte variável. Temas preservam as cores da marca. Repetição de movimento e reset funcionam por estado React. Não há site fictício, mockup de navegador ou cliente inventado.
+
+## Refinamento integral — 12/09/2026
+
+A segunda revisão responde à solicitação de remover o fundo da logo, corrigir sobreposições e tornar o site mais convincente para potenciais clientes.
+
+- O símbolo original permanece incorporado no SVG. Um filtro altera apenas o alfa, removendo o fundo branco e a franja clara. A tentativa de edição automática foi descartada por alterar o resultado.
+- A abertura apresenta argumento e chamada antes da arte no celular. Marca e legendas ocupam áreas distintas, sem posições absolutas concorrentes.
+- Serviços apresentam modalidade, indicação e entregáveis; benefícios explicam identidade, clareza e facilidade de uso. Processo explicita escopo, investimento, prazo e responsabilidades antes do início.
+- Menu indica a seção atual e fecha por Escape, clique fora ou seleção. FAQ, fechamento e rodapé têm tipografia e espaçamento revisados.
+- Auditoria visual de todas as seções, no desktop e em telas pequenas. Verificação de 126 combinações: sete larguras (320, 375, 430, 768, 1024, 1440 e 1920), três formatos, três cores e pesos extremos 300/800. Nenhuma colisão entre os blocos da composição, corte da prévia ou overflow horizontal detectado.
+- Todas as perguntas e serviços abertos nas sete larguras: textos sem extravasamento e âncoras válidas. Reset e Escape conferidos por interação real no navegador.
 
 ## Escopo atualizado
 

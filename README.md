@@ -26,9 +26,10 @@ A integração contínua executa os mesmos comandos. `pnpm-lock.yaml` fixa a ár
 - `src/components/studio-site.tsx`: conteúdo e seções renderizados no servidor.
 - `src/components/navigation.tsx`: menu responsivo, Escape e foco.
 - `src/components/capability.tsx`: experimento interativo em `#capacidade`.
-- `src/components/motion-system.tsx`: um observador de visibilidade e atualizações de scroll sob demanda, com limpeza ao desmontar.
+- `src/components/motion-system.tsx`: um observador de visibilidade, animações curtas e limpeza ao desmontar.
 - `src/components/brand-mark.tsx`: símbolo oficial, sem redesenho.
-- `src/app/styles/studio.css`: sistema visual, responsividade, container queries e reduced motion.
+- `public/brand/mark-transparent.svg`: raster oficial incorporado com filtro de transparência; sem redesenho do símbolo.
+- `src/app/styles/studio.css`: sistema visual, grids responsivos, unidades de container e reduced motion.
 - `src/config/site.ts`: identidade e URL canônica.
 - `src/app/layout.tsx`, `robots.ts`, `sitemap.ts`: fontes locais geradas pelo Next.js, metadados e descoberta.
 

@@ -7,20 +7,35 @@ const offerings = [
   {
     title: "Um site para sua empresa.",
     text: "Para explicar o que você faz, mostrar o que importa e facilitar o primeiro contato.",
-    items: "Sites institucionais · Negócios locais · Portfólios",
-    note: "Sua empresa, bem apresentada.",
+    items: [
+      "Estrutura de páginas e navegação",
+      "Apresentação dos serviços e diferenciais",
+      "Design adaptado ao celular",
+    ],
+    note: "Para quem precisa transmitir confiança desde a primeira visita.",
+    kind: "Site institucional",
   },
   {
     title: "Uma página com um objetivo.",
     text: "Uma campanha, um lançamento ou um serviço. Do primeiro argumento até o pedido de orçamento.",
-    items: "Landing pages · Catálogos · Formulários",
-    note: "Menos distração. Um caminho claro.",
+    items: [
+      "Uma narrativa para sua oferta",
+      "Argumentos e chamadas para ação",
+      "Integrações definidas no escopo",
+    ],
+    note: "Para dar a uma campanha, produto ou serviço um lugar próprio.",
+    kind: "Landing page",
   },
   {
     title: "Um novo olhar para o que existe.",
     text: "Seu negócio mudou e o site ficou para trás? Revemos conteúdo, navegação, design e código.",
-    items: "Redesign · Responsividade · Performance",
-    note: "Preservar a identidade. Melhorar a experiência.",
+    items: [
+      "Revisão da experiência atual",
+      "Nova organização visual e de conteúdo",
+      "Ajustes de velocidade e responsividade",
+    ],
+    note: "Para quando o site já não acompanha a qualidade do seu negócio.",
+    kind: "Redesign",
   },
 ];
 const questions = [
@@ -61,55 +76,56 @@ export function StudioSite() {
             <span>Por Samuel &amp; David</span>
           </div>
           <div className="hero-composition">
-            <h1 id="hero-title">
-              <span>Seu negócio</span>
-              <span>merece ser</span>
-              <span className="hero-last">
-                bem visto<span className="blue-dot">.</span>
-              </span>
-            </h1>
-            <div className="hero-art" aria-hidden="true">
-              <div className="art-orbit orbit-back" />
-              <div className="brand-sheet">
-                <div className="sheet-top">
-                  <span>Dois olhares.</span>
-                  <span>Uma direção. ↗</span>
-                </div>
-                <BrandMark preload />
-                <div className="sheet-bottom">
-                  <span>
-                    Samuel
-                    <br />
-                    &amp; David
-                  </span>
-                  <span>
-                    Design
-                    <br />
-                    &amp; tecnologia
-                  </span>
-                </div>
+            <div className="hero-copy">
+              <h1 id="hero-title">
+                <span>Seu negócio</span>
+                <span>merece ser</span>
+                <span className="hero-last">
+                  bem visto<span className="blue-dot">.</span>
+                </span>
+              </h1>
+              <p className="hero-description">
+                Sites que traduzem o valor do seu negócio e ajudam seu próximo
+                cliente a escolher você. Design e desenvolvimento, do início à
+                entrega.
+              </p>
+              <div className="hero-actions">
+                <a className="button button-blue" href="#servicos">
+                  Encontre o seu projeto <span aria-hidden="true">↗</span>
+                </a>
+                <a className="text-link" href="#capacidade">
+                  Veja na prática <span aria-hidden="true">↓</span>
+                </a>
               </div>
-              <div className="art-orbit orbit-front" />
-              <span className="art-caption">
-                O encontro entre pensar e fazer.
-              </span>
+            </div>
+            <div className="hero-art" aria-hidden="true">
+              <div className="art-label">
+                <span>Dois olhares.</span>
+                <span>Uma direção. ↗</span>
+              </div>
+              <div className="art-symbol">
+                <div className="art-orbit orbit-back" />
+                <BrandMark priority />
+                <div className="art-orbit orbit-front" />
+              </div>
+              <div className="art-caption">
+                <span>
+                  O encontro entre
+                  <br />
+                  pensar e fazer.
+                </span>
+                <span className="art-signature">
+                  Samuel
+                  <br />
+                  &amp; David
+                </span>
+              </div>
             </div>
           </div>
-          <div className="hero-bottom">
-            <p>
-              Criamos sites que apresentam sua empresa com clareza,
-              personalidade e cuidado. Da primeira conversa ao último detalhe.
-            </p>
-            <a className="button button-blue" href="#servicos">
-              Veja como podemos ajudar <span aria-hidden="true">↗</span>
-            </a>
-            <a className="text-link hero-explore" href="#capacidade">
-              Explore o que fazemos <span aria-hidden="true">↓</span>
-            </a>
-          </div>
           <div className="hero-end">
-            <span>S&amp;D Technologies</span>
-            <span>Design com intenção. Código com critério.</span>
+            <span>Identidade que aparece.</span>
+            <span>Experiência que funciona.</span>
+            <span>Uma equipe do início ao fim.</span>
             <span aria-hidden="true">↓</span>
           </div>
         </section>
@@ -117,19 +133,35 @@ export function StudioSite() {
           <div className="shell manifesto-inner">
             <p className="eyebrow">Bonito é o começo.</p>
             <h2 id="manifesto-title">
-              O melhor site é aquele
+              A primeira impressão conta.
               <br />
-              que faz sentido <em>para você.</em>
+              <em>O que vem depois também.</em>
             </h2>
-            <div className="manifesto-copy">
-              <span className="join-symbol" aria-hidden="true">
-                &amp;
-              </span>
-              <p>
-                O que sua empresa tem de bom precisa aparecer também na
-                internet. A gente junta design e desenvolvimento para construir
-                essa presença — com decisões que têm motivo, do texto ao botão.
-              </p>
+            <div className="value-grid">
+              <article>
+                <span aria-hidden="true">↗</span>
+                <h3>Ser lembrado.</h3>
+                <p>
+                  Uma presença com a sua identidade, para sua empresa não
+                  parecer igual a todas as outras.
+                </p>
+              </article>
+              <article>
+                <span aria-hidden="true">↳</span>
+                <h3>Ser entendido.</h3>
+                <p>
+                  Conteúdo organizado para o visitante entender o que você faz e
+                  por que faz sentido para ele.
+                </p>
+              </article>
+              <article>
+                <span aria-hidden="true">↔</span>
+                <h3>Ser fácil de usar.</h3>
+                <p>
+                  Navegação clara, leitura confortável e cuidado com a
+                  experiência em cada tamanho de tela.
+                </p>
+              </article>
             </div>
           </div>
         </section>
@@ -150,14 +182,24 @@ export function StudioSite() {
             {offerings.map((item, i) => (
               <details className="service-row" key={item.title} open={i === 0}>
                 <summary>
-                  <span className="service-title">{item.title}</span>
+                  <span className="service-index" aria-hidden="true">
+                    0{i + 1}
+                  </span>
+                  <span className="service-name">
+                    <span className="service-kind">{item.kind}</span>
+                    <span className="service-title">{item.title}</span>
+                  </span>
                   <span className="plus" aria-hidden="true" />
                 </summary>
                 <div className="service-content">
                   <p className="service-note">{item.note}</p>
                   <div>
                     <p>{item.text}</p>
-                    <p className="service-items">{item.items}</p>
+                    <ul className="service-items">
+                      {item.items.map((deliverable) => (
+                        <li key={deliverable}>{deliverable}</li>
+                      ))}
+                    </ul>
                     <a className="text-link" href="#processo">
                       Entenda nosso processo <span aria-hidden="true">↗</span>
                     </a>
@@ -167,10 +209,11 @@ export function StudioSite() {
             ))}
           </div>
           <div className="service-support">
-            <span>E a parte que faz tudo funcionar?</span>
+            <span>O cuidado continua nos bastidores.</span>
             <p>
-              Integrações, SEO técnico, carregamento rápido e manutenção.
-              Cuidamos da estrutura que sustenta a experiência.
+              Estrutura para os buscadores, atenção ao carregamento e revisão
+              antes de publicar. Funcionalidades e manutenção são combinadas na
+              proposta.
             </p>
           </div>
         </section>
@@ -189,13 +232,27 @@ export function StudioSite() {
             </h2>
           </div>
           <div className="process-layout">
-            <p className="process-lead">
-              Você participa das decisões.
-              <br />A gente cuida de conectar os pontos.
-            </p>
+            <div className="process-lead">
+              <p>
+                Você sabe o que está sendo feito, o que vem a seguir e o que vai
+                receber.
+              </p>
+              <div className="project-agreement">
+                <span>Antes de começar</span>
+                <p>
+                  Escopo, investimento, prazo e responsabilidades definidos na
+                  proposta.
+                </p>
+                <a className="text-link" href="#faq">
+                  Tire suas dúvidas <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
             <div className="process-chapters">
               <article>
-                <span className="chapter-phase">Antes da primeira tela</span>
+                <span className="chapter-phase">
+                  01 / Antes da primeira tela
+                </span>
                 <h3>Entender, de verdade.</h3>
                 <p>
                   Conversamos sobre seu negócio, seu público e o que precisa
@@ -207,7 +264,9 @@ export function StudioSite() {
                 </span>
               </article>
               <article>
-                <span className="chapter-phase">Com o projeto na mesa</span>
+                <span className="chapter-phase">
+                  02 / Com o projeto na mesa
+                </span>
                 <h3>Dar forma. Fazer funcionar.</h3>
                 <p>
                   Desenhamos a experiência, revisamos com você e construímos o
@@ -219,12 +278,13 @@ export function StudioSite() {
               </article>
               <article>
                 <span className="chapter-phase">
-                  Antes e depois do publicar
+                  03 / Antes e depois de publicar
                 </span>
                 <h3>Revisar até fazer sentido.</h3>
                 <p>
-                  Conferimos conteúdo, links, formulário e diferentes telas.
-                  Publicamos, verificamos o site no ar e organizamos a entrega.
+                  Conferimos conteúdo, links, funcionalidades e diferentes
+                  telas. Publicamos, verificamos o site no ar e organizamos a
+                  entrega.
                 </p>
                 <span className="chapter-result">
                   Você fica com → o site e os acessos combinados.
@@ -262,11 +322,11 @@ export function StudioSite() {
                 que faz diferença para o seu negócio.
               </p>
               <div className="future-note">
-                <span>O que vem pela frente</span>
+                <span>Proximidade faz parte do projeto.</span>
                 <p>
-                  Hoje, nosso foco é a web. Sistemas, automações e produtos
-                  digitais fazem parte do caminho que queremos construir para a
-                  S&amp;D.
+                  Da organização das primeiras ideias à publicação, Samuel e
+                  David acompanham as escolhas que dão forma à sua presença
+                  digital.
                 </p>
               </div>
             </div>
@@ -280,9 +340,9 @@ export function StudioSite() {
           <div>
             <p className="eyebrow">Podemos esclarecer</p>
             <h2 id="faq-title">
-              Antes do
+              Boas decisões
               <br />
-              <em>primeiro “oi”.</em>
+              <em>começam com clareza.</em>
             </h2>
           </div>
           <div>
@@ -302,13 +362,14 @@ export function StudioSite() {
             <div>
               <p className="eyebrow">S&amp;D Technologies</p>
               <h2>
-                Dois olhares.
+                Seu próximo capítulo.
                 <br />
-                <em>Uma boa direção.</em>
+                <em>Bem apresentado.</em>
               </h2>
             </div>
-            <a className="text-link" href="#capacidade">
-              Experimente a S&amp;D <span aria-hidden="true">↗</span>
+            <a className="text-link" href="#servicos">
+              Descubra o caminho para seu site{" "}
+              <span aria-hidden="true">↗</span>
             </a>
           </div>
         </section>

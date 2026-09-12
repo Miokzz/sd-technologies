@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   publisher: "S&D Technologies",
   alternates: { canonical: "/" },
   icons: {
-    icon: [{ url: "/brand/mark.webp", type: "image/webp" }],
-    apple: [{ url: "/brand/mark.webp" }],
+    icon: [{ url: "/brand/mark-transparent.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/brand/logo-original.png" }],
   },
   openGraph: {
     type: "website",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f4f3ed",
+  themeColor: "#f5f4ef",
 };
 
 export default function RootLayout({
