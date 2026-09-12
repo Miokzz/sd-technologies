@@ -1,101 +1,53 @@
 # S&D Technologies
 
-Site institucional oficial da S&D Technologies, empresa de tecnologia e soluções digitais criada por Samuel e David.
+Site oficial de Samuel e David. Repositório: `Miokzz/sd-technologies`. Produção: https://sd-technologies.vercel.app/.
 
-## Stack
+## Desenvolvimento
 
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- Framer Motion
-- Vercel (produção)
+Node.js 24 e pnpm 11.19.0.
 
-## Desenvolvimento local
-
-```bash
-npm install
-npm run dev
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-A aplicação ficará disponível em `http://localhost:3000`.
+## Verificação
 
-## Validação antes de publicar
-
-```bash
-npm run lint
-npm run typecheck
-npm run build
+```sh
+pnpm lint
+pnpm typecheck
+pnpm build
 ```
 
-A branch de desenvolvimento também possui CI em `.github/workflows/ci.yml` para repetir lint, TypeScript e build antes da publicação.
-
-## Variáveis de ambiente
-
-Copie `.env.example` para `.env.local` e configure apenas o que for necessário.
-
-```bash
-cp .env.example .env.local
-```
-
-- `NEXT_PUBLIC_SITE_URL`: URL canônica do site.
-- `NEXT_PUBLIC_CONTACT_EMAIL`: e-mail exibido na interface.
-- `NEXT_PUBLIC_WHATSAPP_URL`: link completo do WhatsApp.
-- `NEXT_PUBLIC_INSTAGRAM_URL`: link completo do Instagram.
-- `CONTACT_WEBHOOK_URL`: endpoint server-side para receber leads do formulário.
-- `CONTACT_WEBHOOK_SECRET`: token Bearer opcional enviado ao webhook.
-
-Nenhum segredo deve ser enviado ao repositório.
+A integração contínua executa os mesmos comandos. `pnpm-lock.yaml` fixa a árvore de dependências. A única instalação com script permitida é o resolvedor nativo do ESLint.
 
 ## Estrutura
 
-```text
-src/
-  app/                 # App Router, metadata, sitemap, robots, API e estilos
-  components/          # Componentes reutilizáveis e interativos
-  config/              # Configuração central, serviços e projetos
-  lib/                 # Validação e utilidades
-  sections/            # Seções da homepage
-  types/               # Tipos compartilhados
-public/
-  brand/               # Logo oficial e símbolo
-  assets/projects/     # Imagens reais de trabalhos futuros
-```
+- `src/components/studio-site.tsx`: conteúdo e seções renderizados no servidor.
+- `src/components/navigation.tsx`: menu responsivo, Escape e foco.
+- `src/components/capability.tsx`: experimento interativo em `#capacidade`.
+- `src/components/motion-system.tsx`: um observador de visibilidade e atualizações de scroll sob demanda, com limpeza ao desmontar.
+- `src/components/brand-mark.tsx`: símbolo oficial, sem redesenho.
+- `src/app/styles/studio.css`: sistema visual, responsividade, container queries e reduced motion.
+- `src/config/site.ts`: identidade e URL canônica.
+- `src/app/layout.tsx`, `robots.ts`, `sitemap.ts`: fontes locais geradas pelo Next.js, metadados e descoberta.
 
-## Onde editar conteúdo
+Não há portfólio fictício, métricas, clientes ou depoimentos inventados. O experimento é identificado como trabalho autoral da S&D.
 
-A maior parte dos dados comerciais está em `src/config/site.ts`. Ali ficam nome, descrição, fundadores, contatos, navegação, serviços, visão futura, processo e FAQ.
+## Contato
 
-## Como adicionar projetos no futuro
+Por decisão expressa dos fundadores nesta revisão, não há seção de contato, formulário, endpoint de leads nem integração externa. Não configurar serviços de recebimento até que um contato comercial seja definido.
 
-A seção de portfólio atual é deliberadamente honesta e não inventa trabalhos. Quando os primeiros projetos existirem:
+## Publicação
 
-1. Edite a coleção vazia em `src/config/projects.ts`.
-2. Adicione imagens reais em `public/assets/projects/`.
-3. Evolua `src/sections/portfolio.tsx` para renderizar essa coleção.
-4. Mantenha descrição, escopo e resultados verificáveis.
+Usar **somente** o projeto Vercel existente `sd-technologies` (`prj_Hy8Y4Pnjb0IXiqJEcWDDqPgGGuqv`) na equipe `miokzzs-projects`. A branch de produção é `main`. `vercel.json` declara Next.js, instalação congelada e build pnpm. O deploy deve ter o GitHub como origem; não enviar arquivos diretamente pela API.
 
-## Formulário
+O estado anterior foi preservado em `codex/before-brand-redesign-20260912`. Para desfazer, usar revert dos commits do redesign, preservando histórico.
 
-O formulário valida os dados no cliente e novamente na rota `POST /api/contact`.
+## Variáveis
 
-A rota encaminha o lead para `CONTACT_WEBHOOK_URL`. Isso permite conectar depois um serviço de e-mail, CRM, automação ou uma Edge Function sem expor credenciais no navegador.
+Nenhum segredo é necessário. `NEXT_PUBLIC_SITE_URL` é opcional; por padrão, canonical, JSON-LD e sitemap apontam para a URL oficial, mesmo nos previews.
 
-## Supabase
+## Direção e validação
 
-Supabase não é obrigatório na versão inicial. Se for adotado depois, a recomendação é criar uma tabela `leads`, habilitar RLS e receber os dados através de uma rota server-side ou Edge Function, nunca expondo `service_role` ao cliente.
-
-## Deploy
-
-O fluxo esperado é:
-
-1. projeto validado;
-2. commit no GitHub;
-3. repositório conectado a um único projeto Vercel;
-4. variáveis configuradas na Vercel;
-5. deploy de produção;
-6. revisão visual e funcional da URL publicada.
-
-## Domínio
-
-Quando houver um domínio próprio, conecte-o ao projeto Vercel e altere `NEXT_PUBLIC_SITE_URL` para a URL final de produção. Depois faça um novo deploy para atualizar canonical, sitemap, robots e JSON-LD.
+Veja `docs/redesign-note.md` para a direção visual, decisões e registro de verificação.

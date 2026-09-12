@@ -29,3 +29,7 @@ pnpm-debug.log*
 
 # typescript
 *.tsbuildinfo
+
+# Local research and verification
+.audit/
+.audit-*
