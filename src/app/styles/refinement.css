@@ -1,0 +1,214 @@
+/* S&D Technologies — visual quality / motion refinement pass */
+:root {
+  --paper: #f5f4ef;
+  --paper-2: #fbfbf8;
+  --blue: #0b78ff;
+  --blue-2: #62b9ff;
+  --acid: #d9ecff;
+  --wine: #071322;
+}
+
+/* Brand coherence and interaction polish */
+.experience-nav {
+  transition: background .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.experience-nav__cta,
+.experience-nav__mobile-cta,
+.magnetic-link:not(.magnetic-link--dark) {
+  background: linear-gradient(135deg, #eef7ff, #a8d9ff);
+  color: #06111d;
+  box-shadow: 0 10px 30px rgba(13,110,253,.16);
+}
+.experience-nav__cta:hover,
+.magnetic-link:hover { filter: brightness(1.025); }
+.text-link span,
+.hero-marquee i { color: #6fc2ff; }
+
+/* Keep the hero alive without the whole composition wobbling or fading away. */
+.hero-scene__art {
+  transform: none !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(circle at 52% 43%, rgba(29,125,255,.28), transparent 35%),
+    linear-gradient(145deg, rgba(255,255,255,.04), rgba(31,112,255,.035));
+}
+.hero-scene h1 span {
+  color: transparent;
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+  background: linear-gradient(90deg, #69baff 0%, #1687ff 52%, #6ec5ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.hero-mark { will-change: transform; }
+.hero-token { transform: none !important; will-change: translate; }
+.hero-token--one { animation: sd-token-a 6.4s ease-in-out infinite; }
+.hero-token--two { animation: sd-token-b 7.2s ease-in-out infinite; }
+.hero-token--three { animation: sd-token-c 7.8s ease-in-out infinite; }
+@keyframes sd-token-a { 50% { translate: 0 -6px; } }
+@keyframes sd-token-b { 50% { translate: 0 5px; } }
+@keyframes sd-token-c { 50% { translate: 4px 0; } }
+
+/* Capability demo: no text/UI collision, no fluorescent badge. */
+.capability-stage__browser {
+  width: 74%;
+  min-height: 465px;
+}
+.browser-copy {
+  width: 67%;
+  padding: 32px;
+}
+.browser-copy b {
+  font-size: clamp(24px, 2.7vw, 42px);
+  line-height: 1;
+}
+.browser-ui { inset: 66% 7% 7%; }
+.capability-stage__badge {
+  background: linear-gradient(135deg, #eef7ff, #9ed5ff);
+  box-shadow: 0 15px 42px rgba(13,110,253,.2);
+  transform: rotate(4deg);
+}
+
+/* Service composition stays editorial, but the motion is disciplined. */
+.service-piece {
+  transform: none !important;
+  border: 1px solid rgba(255,255,255,.04);
+  transition: border-color .25s ease, box-shadow .25s ease, translate .25s ease;
+}
+.service-piece:not(.service-piece--1):not(.service-piece--6) {
+  border-color: rgba(7,9,13,.08);
+}
+.service-piece--3 { background: #d9ecff; }
+@media (hover: hover) {
+  .service-piece:hover {
+    translate: 0 -4px;
+    box-shadow: 0 28px 70px rgba(0,0,0,.20);
+  }
+}
+
+/* Future scene: high-impact color change, but inside the S&D palette. */
+.future-scene {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(255,255,255,.86), transparent 24%),
+    linear-gradient(145deg, #dcecff 0%, #eef5ff 48%, #f6f4ef 100%);
+  color: #08111d;
+}
+.future-scene__rail { color: rgba(7,17,29,.92); opacity: .88; }
+.future-orbit { border-color: rgba(13,110,253,.20); }
+.future-orbit:before,
+.future-orbit:after { border-color: rgba(13,110,253,.17); }
+.future-pill {
+  transform: rotate(var(--r)) !important;
+  border-color: rgba(13,75,145,.18);
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 18px 40px rgba(24,79,143,.12);
+  transition: translate .22s ease, box-shadow .22s ease;
+}
+.future-pill span { color: #5d6f87; }
+.future-pill small { color: #607791; }
+@media (hover: hover) {
+  .future-pill:hover { translate: 0 -4px; box-shadow: 0 22px 48px rgba(24,79,143,.16); }
+}
+.future-orbit__core { box-shadow: 0 25px 55px rgba(7,44,92,.22); }
+
+/* Story + contact now feel like the same company as the hero. */
+.story-card--founders {
+  background:
+    radial-gradient(circle at 82% 16%, rgba(13,110,253,.22), transparent 34%),
+    linear-gradient(145deg, #071322, #070b11 68%);
+}
+.story-card--narrative { background: #eceae4; }
+
+.process-step {
+  transform: none !important;
+  transition: background .2s ease, padding-left .2s ease;
+}
+@media (hover: hover) {
+  .process-step:hover { background: rgba(255,255,255,.025); padding-left: 8px; }
+}
+
+.contact-scene {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(103,190,255,.32), transparent 28%),
+    linear-gradient(145deg, #0b78ff, #075ad6 72%);
+}
+.contact-copy h2 span { color: #06162a; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.contact-submit { transition: transform .2s ease, background .2s ease; }
+.contact-submit:hover { transform: translateY(-1px); background: #0d1c31; }
+
+@media (max-width: 720px) {
+  .capability-stage__browser {
+    left: 5%;
+    top: 11%;
+    width: 90%;
+    min-height: 430px;
+    transform: none !important;
+  }
+  .browser-copy { width: 100%; padding: 24px; }
+  .browser-copy b {
+    max-width: 92%;
+    font-size: clamp(28px, 7.6vw, 36px);
+    line-height: 1.02;
+  }
+  .browser-ui { inset: 73% 6% 6%; }
+  .capability-stage__badge { width: 74px; height: 74px; right: 4%; top: 3%; }
+
+  /* Replace free-floating absolute pills with a stable, touch-friendly grid. */
+  .future-orbit {
+    height: auto;
+    min-height: 0;
+    border-radius: 28px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: rgba(255,255,255,.34);
+  }
+  .future-orbit:before,
+  .future-orbit:after { display: none; }
+  .future-orbit__core {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 108px;
+    height: 108px;
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 4px 0 8px;
+  }
+  .future-pill,
+  .future-pill--1,
+  .future-pill--2,
+  .future-pill--3,
+  .future-pill--4,
+  .future-pill--5 {
+    position: relative;
+    inset: auto;
+    min-width: 0;
+    width: 100%;
+    transform: none !important;
+  }
+  .future-pill--5 { grid-column: 1 / -1; }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea { font-size: 16px; }
+}
+
+@media (max-width: 390px) {
+  .capability-stage__canvas { min-height: 580px; }
+  .future-orbit { grid-template-columns: 1fr; }
+  .future-orbit__core,
+  .future-pill--5 { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-token--one,
+  .hero-token--two,
+  .hero-token--three { animation: none !important; }
+}
