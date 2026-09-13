@@ -1,10 +1,6 @@
-// Fill only with business information expressly supplied by the owners.
-export const legalIdentity = {
-  name: "S&D Technologies — Samuel e David",
-  registration: "",
-  privacyEmail: "",
+// Publication information shared by the portfolio's legal pages.
+export const legalPublication = {
   updated: "12 de setembro de 2026",
-  complete: false,
 };
 
 export const legalDocuments = [

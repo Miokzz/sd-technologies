@@ -1,30 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  LegalDocument,
-  LegalIdentity,
-  type LegalSection,
-} from "@/components/legal-document";
-import { legalIdentity } from "@/config/legal";
+import { LegalDocument, type LegalSection } from "@/components/legal-document";
 
 export const metadata: Metadata = {
   title: "Privacidade",
   description:
     "Informações sobre a navegação, a infraestrutura e a privacidade no site da S&D Technologies.",
   alternates: { canonical: "/privacidade" },
-  robots: { index: legalIdentity.complete, follow: true },
+  robots: { index: true, follow: true },
 };
 const sections: LegalSection[] = [
   {
-    id: "responsavel",
-    title: "Responsável e alcance",
+    id: "sobre-este-aviso",
+    title: "Sobre este aviso",
     content: (
       <>
-        <LegalIdentity />
         <p>
-          Este aviso descreve o funcionamento do site institucional da S&amp;D.
-          Ele não substitui informações específicas de futuros serviços,
-          contratos ou ambientes que venham a tratar outros dados.
+          Este aviso descreve o funcionamento do portfólio da S&amp;D, onde
+          Samuel e David apresentam seus trabalhos independentes de design e
+          desenvolvimento web. Ele não substitui informações específicas de
+          futuros serviços, contratos ou ambientes que venham a tratar outros
+          dados.
         </p>
       </>
     ),
@@ -148,15 +144,8 @@ const sections: LegalSection[] = [
           questionar um tratamento e peticionar à autoridade competente.
         </p>
         <p>
-          Para localizar um registro técnico, pode ser necessário informar a
-          página e o período do acesso. Não envie senhas ou documentos completos
-          sem necessidade. Eventuais verificações de identidade devem ser
-          proporcionais ao pedido.
-        </p>
-        <p>
-          A identificação e o canal do responsável estão na seção{" "}
-          <a href="#responsavel">Responsável e alcance</a>. Informações oficiais
-          sobre proteção de dados estão disponíveis na{" "}
+          Informações oficiais sobre proteção de dados e o exercício dos seus
+          direitos estão disponíveis na{" "}
           <a
             href="https://www.gov.br/anpd/pt-br"
             target="_blank"

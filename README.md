@@ -57,4 +57,4 @@ Veja `docs/redesign-note.md` para a direção visual, decisões e registro de ve
 
 Serviços e FAQ usam `AnimatedDisclosure`: altura medida, reversão de animação, teclado, encerramento ao redimensionar e respeito a movimento reduzido. O conteúdo continua usando `details` nativo.
 
-As páginas legais estão preparadas em desenvolvimento e aguardam os dados de identificação e privacidade antes da publicação. Consulte `docs/legal-readiness.md` e `src/config/legal.ts`.
+Termos de uso, Privacidade e Cookies estão disponíveis em páginas próprias, com acesso pelo rodapé e pela central `/legal`. Os textos descrevem o portfólio e o trabalho independente de Samuel e David. Consulte `docs/legal-readiness.md` e `src/config/legal.ts`.

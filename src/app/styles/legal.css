@@ -95,14 +95,6 @@
   font-size: 11px;
   color: var(--muted);
 }
-.legal-draft {
-  background: #efe6d8;
-  color: #67461b;
-  padding: 18px 22px;
-  margin-top: 26px;
-  font-size: 13px;
-  border-left: 2px solid #947044;
-}
 .legal-layout {
   display: grid;
   grid-template-columns: minmax(180px, 0.85fr) minmax(0, 2fr);
@@ -361,10 +353,6 @@
   }
   .legal-hub-note {
     padding-bottom: 48px;
-  }
-  .legal-draft {
-    font-size: 12px;
-    padding: 15px 17px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

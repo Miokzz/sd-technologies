@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalDocument, type LegalSection } from "@/components/legal-document";
-import { legalIdentity } from "@/config/legal";
+import { legalPublication } from "@/config/legal";
 
 export const metadata: Metadata = {
   title: "Cookies e tecnologias",
   description:
     "Como o site da S&D utiliza recursos do navegador e tecnologias de hospedagem.",
   alternates: { canonical: "/cookies" },
-  robots: { index: legalIdentity.complete, follow: true },
+  robots: { index: true, follow: true },
 };
 const sections: LegalSection[] = [
   {
@@ -78,7 +78,7 @@ const sections: LegalSection[] = [
           será atualizada quando houver mudanças relevantes nas tecnologias
           utilizadas.
         </p>
-        <p>Atualização desta versão: {legalIdentity.updated}.</p>
+        <p>Atualização desta versão: {legalPublication.updated}.</p>
       </>
     ),
   },

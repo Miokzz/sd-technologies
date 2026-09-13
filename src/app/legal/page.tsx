@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalFrame } from "@/components/legal-document";
-import { legalDocuments, legalIdentity } from "@/config/legal";
+import { legalDocuments } from "@/config/legal";
 
 export const metadata: Metadata = {
   title: "Informações legais",
   description:
     "Termos de uso, privacidade e tecnologias utilizadas no site da S&D Technologies.",
   alternates: { canonical: "/legal" },
-  robots: { index: legalIdentity.complete, follow: true },
+  robots: { index: true, follow: true },
 };
 
 export default function LegalPage() {
@@ -28,12 +28,6 @@ export default function LegalPage() {
             consultar quando precisar.
           </p>
         </div>
-        {!legalIdentity.complete && (
-          <p className="legal-draft" role="note">
-            Documentos em preparação. Identificação formal e canal de
-            privacidade aguardam confirmação.
-          </p>
-        )}
         <div className="legal-catalog">
           {legalDocuments.map((document, index) => (
             <Link key={document.href} href={document.href}>

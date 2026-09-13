@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  LegalDocument,
-  LegalIdentity,
-  type LegalSection,
-} from "@/components/legal-document";
-import { legalIdentity } from "@/config/legal";
+import { LegalDocument, type LegalSection } from "@/components/legal-document";
 
 export const metadata: Metadata = {
   title: "Termos de uso",
-  description: "Condições de uso do site institucional da S&D Technologies.",
+  description:
+    "Condições de uso do portfólio de Samuel e David, S&D Technologies.",
   alternates: { canonical: "/termos" },
-  robots: { index: legalIdentity.complete, follow: true },
+  robots: { index: true, follow: true },
 };
 const sections: LegalSection[] = [
   {
-    id: "responsavel",
+    id: "sobre-o-site",
     title: "Sobre este site",
     content: (
       <>
-        <LegalIdentity />
+        <p>
+          S&amp;D Technologies é o nome usado por Samuel e David para apresentar
+          seus trabalhos independentes de design e desenvolvimento web.
+        </p>
         <p>
           O site apresenta a S&amp;D, seus serviços de design e desenvolvimento
           web e uma demonstração interativa de sua identidade. Estes termos se
