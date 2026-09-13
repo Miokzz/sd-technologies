@@ -51,7 +51,7 @@ Nenhum segredo é necessário. `NEXT_PUBLIC_SITE_URL` é opcional; por padrão, 
 
 ## Direção e validação
 
-Veja `docs/redesign-note.md` para a direção visual, decisões e registro de verificação.
+Veja `docs/evolution-2026-09-13.md` para a direção visual atual e o registro de verificação. O histórico anterior está em `docs/redesign-note.md`.
 
 ## Movimento e documentos legais
 

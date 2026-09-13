@@ -12,7 +12,7 @@ export function BrandMark({
     <Image
       className={`brand-mark ${className}`}
       src="/brand/mark-transparent.svg"
-      alt="Símbolo oficial da S&D Technologies"
+      alt={small ? "" : "Símbolo oficial da S&D Technologies"}
       width={695}
       height={525}
       sizes={small ? "51px" : "(max-width: 600px) 260px, 420px"}

@@ -2,8 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { BrandMark } from "@/components/brand-mark";
 const links = [
+  ["Nosso trabalho", "#capacidade"],
   ["Serviços", "#servicos"],
-  ["Capacidade", "#capacidade"],
   ["Sobre nós", "#sobre"],
 ];
 export function Navigation() {
@@ -64,7 +64,7 @@ export function Navigation() {
         >
           <BrandMark small />
           <span>
-            <b>S&amp;D</b>
+            <b>S&amp;D</b>{" "}
             <small>Technologies</small>
           </span>
         </a>

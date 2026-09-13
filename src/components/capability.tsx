@@ -16,14 +16,14 @@ const themes = [
 
 export function Capability() {
   const [format, setFormat] = useState<(typeof formats)[number][0]>("wide");
-  const [theme, setTheme] = useState<(typeof themes)[number][0]>("paper");
+  const [theme, setTheme] = useState<(typeof themes)[number][0]>("blue");
   const [weight, setWeight] = useState(650);
   const [replay, setReplay] = useState(0);
 
   function reset() {
     setFormat("wide");
     setWeight(650);
-    setTheme("paper");
+    setTheme("blue");
     setReplay((value) => value + 1);
   }
 
@@ -36,29 +36,72 @@ export function Capability() {
       <div className="shell">
         <div className="capability-heading">
           <div>
-            <p className="eyebrow">Design que você pode experimentar</p>
+            <p className="eyebrow">
+              <span className="section-number">02 /</span> Feito aqui. Explore você.
+            </p>
             <h2 id="capability-title">
-              Uma identidade.
+              Nosso trabalho,
               <br />
-              <em>Novas possibilidades.</em>
+              <em>em suas mãos.</em>
             </h2>
           </div>
           <p>
-            O cuidado aparece nos detalhes. Mude o formato, a cor e a tipografia
-            para ver a composição se adaptar.
+            Uma composição da nossa própria identidade. Você assume a direção:
+            altere formato, cor e tipografia. Veja como cada escolha transforma
+            o resultado.
           </p>
         </div>
         <div className="playground">
           <div className="playground-toolbar">
             <span>
               <i aria-hidden="true" />
-              Estúdio interativo / S&amp;D
+              Composição viva / S&amp;D
             </span>
             <button type="button" onClick={reset} className="reset-button">
               Recomeçar <span aria-hidden="true">↺</span>
             </button>
           </div>
           <div className="playground-body">
+            <div
+              className="playground-stage"
+              role="group"
+              aria-label="Prévia interativa da identidade S&D"
+            >
+              <div
+                className={`specimen format-${format} theme-${theme}`}
+                style={{ "--type-weight": weight } as CSSProperties}
+              >
+                <div className="specimen-content" key={replay}>
+                  <div className="specimen-top">
+                    <span>S&amp;D Technologies</span>
+                    <span aria-hidden="true">↗</span>
+                  </div>
+                  <div className="specimen-middle">
+                    <div className="specimen-title">
+                      <span>Uma ideia.</span>
+                      <em>Muitos</em>
+                      <span>
+                        formatos<span className="blue-dot">.</span>
+                      </span>
+                    </div>
+                    <div className="specimen-mark">
+                      <BrandMark />
+                    </div>
+                  </div>
+                  <div className="specimen-bottom">
+                    <span>
+                      O espaço muda.
+                      <br />A identidade fica.
+                    </span>
+                    <span>
+                      Design &amp;
+                      <br />
+                      desenvolvimento
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="playground-controls">
               <fieldset>
                 <legend>01 / Formato</legend>
@@ -120,51 +163,11 @@ export function Capability() {
                 Rever movimento <span aria-hidden="true">↻</span>
               </button>
             </div>
-            <div
-              className="playground-stage"
-              aria-label="Prévia interativa da identidade S&D"
-            >
-              <div
-                className={`specimen format-${format} theme-${theme}`}
-                style={{ "--type-weight": weight } as CSSProperties}
-              >
-                <div className="specimen-content" key={replay}>
-                  <div className="specimen-top">
-                    <span>S&amp;D Technologies</span>
-                    <span aria-hidden="true">↗</span>
-                  </div>
-                  <div className="specimen-middle">
-                    <div className="specimen-title">
-                      <span>Uma ideia.</span>
-                      <em>Muitos</em>
-                      <span>
-                        formatos<span className="blue-dot">.</span>
-                      </span>
-                    </div>
-                    <div className="specimen-mark">
-                      <BrandMark />
-                    </div>
-                  </div>
-                  <div className="specimen-bottom">
-                    <span>
-                      O espaço muda.
-                      <br />A identidade fica.
-                    </span>
-                    <span>
-                      Design &amp;
-                      <br />
-                      desenvolvimento
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div className="capability-foot">
           <p>
-            Seu site também precisa se adaptar. É esse olhar que levamos para
-            cada projeto.
+            O formato muda. A intenção permanece. Design e desenvolvimento trabalhando juntos, na prática.
           </p>
           <span>Experimento autoral da S&amp;D.</span>
         </div>

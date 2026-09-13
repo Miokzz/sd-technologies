@@ -21,7 +21,7 @@ export function LegalFrame({ children }: { children: ReactNode }) {
           >
             <BrandMark small />
             <span>
-              <b>S&amp;D</b>
+              <b>S&amp;D</b>{" "}
               <small>Technologies</small>
             </span>
           </Link>
