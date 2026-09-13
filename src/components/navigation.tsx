@@ -101,21 +101,26 @@ export function Navigation() {
       </div>
       <nav
         id="mobile-menu"
-        className="mobile-menu"
+        className={`mobile-menu ${open ? "is-open" : ""}`}
         aria-label="Navegação mobile"
-        hidden={!open}
+        aria-hidden={!open}
+        inert={!open}
       >
-        {[...links, ["Processo", "#processo"]].map(([label, href]) => (
-          <a
-            key={href}
-            href={href}
-            onClick={() => setOpen(false)}
-            aria-current={active === href ? "location" : undefined}
-          >
-            {label}
-            <span aria-hidden="true">↗</span>
-          </a>
-        ))}
+        <div className="mobile-menu-clip">
+          <div className="mobile-menu-inner">
+            {[...links, ["Processo", "#processo"]].map(([label, href]) => (
+              <a
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                aria-current={active === href ? "location" : undefined}
+              >
+                {label}
+                <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </div>
       </nav>
     </header>
   );

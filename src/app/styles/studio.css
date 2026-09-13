@@ -185,7 +185,7 @@ input:focus-visible {
   font-size: 24px;
 }
 .menu-toggle,
-.mobile-menu[hidden] {
+.mobile-menu {
   display: none;
 }
 .hero {
@@ -498,7 +498,6 @@ details[open] .plus:after {
   gap: 70px;
   margin-left: 84px;
   padding: 2px 0 42px;
-  animation: unfold 0.4s var(--ease);
 }
 .service-note {
   font:
@@ -1051,7 +1050,6 @@ details[open] .plus:after {
   font-size: 14px;
   color: var(--muted);
   padding: 0 40px 28px 0;
-  animation: unfold 0.4s var(--ease);
 }
 .closing {
   background: var(--blue);
@@ -1129,14 +1127,6 @@ details[open] .plus:after {
   }
   to {
     transform: translateY(0) rotate(-6deg);
-  }
-}
-@keyframes unfold {
-  from {
-    transform: translateY(-5px);
-  }
-  to {
-    transform: translateY(0);
   }
 }
 @keyframes type-arrive {
@@ -1301,15 +1291,43 @@ details[open] .plus:after {
     transform: translateY(-3.5px) rotate(-45deg);
   }
   .mobile-menu {
+    display: grid;
+    grid-template-rows: 0fr;
     position: absolute;
     top: 100%;
     width: 100%;
-    padding: 12px 20px 24px;
     border-bottom: 1px solid var(--line);
     background: var(--paper);
     box-shadow: 0 18px 24px #17202710;
     max-height: calc(100dvh - 72px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      grid-template-rows 420ms var(--ease),
+      opacity 250ms ease,
+      visibility 0s 420ms;
+  }
+  .mobile-menu.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+  .mobile-menu-clip {
+    min-height: 0;
+    overflow: hidden;
+  }
+  .mobile-menu-inner {
+    padding: 12px 20px 24px;
+    max-height: calc(100dvh - 72px);
     overflow-y: auto;
+    transform: translateY(-8px);
+    transition: transform 420ms var(--ease);
+  }
+  .mobile-menu.is-open .mobile-menu-inner {
+    transform: translateY(0);
   }
   .mobile-menu a {
     display: flex;

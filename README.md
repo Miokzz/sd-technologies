@@ -52,3 +52,9 @@ Nenhum segredo é necessário. `NEXT_PUBLIC_SITE_URL` é opcional; por padrão, 
 ## Direção e validação
 
 Veja `docs/redesign-note.md` para a direção visual, decisões e registro de verificação.
+
+## Movimento e documentos legais
+
+Serviços e FAQ usam `AnimatedDisclosure`: altura medida, reversão de animação, teclado, encerramento ao redimensionar e respeito a movimento reduzido. O conteúdo continua usando `details` nativo.
+
+As páginas legais estão preparadas em desenvolvimento e aguardam os dados de identificação e privacidade antes da publicação. Consulte `docs/legal-readiness.md` e `src/config/legal.ts`.

@@ -18,7 +18,7 @@ export function MotionSystem() {
     );
     document
       .querySelectorAll(
-        ".hero-art, .manifesto, .capability, .process-chapters article, .founder-type",
+        ".hero-art, .manifesto, .capability, .process-chapters article, .founder-type, .section-heading, .value-grid article, .about-copy",
       )
       .forEach((element) => observer.observe(element));
     return () => observer.disconnect();

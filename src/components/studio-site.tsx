@@ -2,6 +2,8 @@ import { BrandMark } from "@/components/brand-mark";
 import { Navigation } from "@/components/navigation";
 import { Capability } from "@/components/capability";
 import { MotionSystem } from "@/components/motion-system";
+import { AnimatedDisclosure } from "@/components/animated-disclosure";
+import { LegalLinks } from "@/components/legal-links";
 
 const offerings = [
   {
@@ -180,17 +182,23 @@ export function StudioSite() {
           </div>
           <div className="service-list">
             {offerings.map((item, i) => (
-              <details className="service-row" key={item.title} open={i === 0}>
-                <summary>
-                  <span className="service-index" aria-hidden="true">
-                    0{i + 1}
-                  </span>
-                  <span className="service-name">
-                    <span className="service-kind">{item.kind}</span>
-                    <span className="service-title">{item.title}</span>
-                  </span>
-                  <span className="plus" aria-hidden="true" />
-                </summary>
+              <AnimatedDisclosure
+                className="service-row"
+                key={item.title}
+                defaultOpen={i === 0}
+                summary={
+                  <>
+                    <span className="service-index" aria-hidden="true">
+                      0{i + 1}
+                    </span>
+                    <span className="service-name">
+                      <span className="service-kind">{item.kind}</span>
+                      <span className="service-title">{item.title}</span>
+                    </span>
+                    <span className="plus" aria-hidden="true" />
+                  </>
+                }
+              >
                 <div className="service-content">
                   <p className="service-note">{item.note}</p>
                   <div>
@@ -205,7 +213,7 @@ export function StudioSite() {
                     </a>
                   </div>
                 </div>
-              </details>
+              </AnimatedDisclosure>
             ))}
           </div>
           <div className="service-support">
@@ -347,13 +355,17 @@ export function StudioSite() {
           </div>
           <div>
             {questions.map(([q, a]) => (
-              <details key={q}>
-                <summary>
-                  {q}
-                  <span className="plus" aria-hidden="true" />
-                </summary>
+              <AnimatedDisclosure
+                key={q}
+                summary={
+                  <>
+                    {q}
+                    <span className="plus" aria-hidden="true" />
+                  </>
+                }
+              >
                 <p>{a}</p>
-              </details>
+              </AnimatedDisclosure>
             ))}
           </div>
         </section>
@@ -392,8 +404,7 @@ export function StudioSite() {
         </a>
         <div className="footer-base">
           <span>© {new Date().getFullYear()} S&amp;D Technologies</span>
-          <a href="#servicos">Design &amp; desenvolvimento web</a>
-          <span>Samuel &amp; David</span>
+          <LegalLinks />
         </div>
       </footer>
     </>
