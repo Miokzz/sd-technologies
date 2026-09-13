@@ -16,8 +16,10 @@ Origem pública: https://sd-technologies.vercel.app. Projeto Vercel existente:
   Open Graph e Twitter ao título, descrição e URL da própria página. A imagem
   oficial da marca permanece compartilhada.
 - Identidade, conteúdo comercial, documentos legais e direção visual preservados.
-- O favicon usa o PNG oficial quadrado já existente (1254 × 1254), em vez do
-  SVG retangular usado na interface. Nenhum arquivo da marca foi alterado.
+- O favicon usa uma cópia PNG de 96 × 96 do logo oficial quadrado, em vez do
+  SVG retangular usado na interface. O original permanece intacto. A redução
+  determinística usa o `sharp` já instalado pelo Next.js, sem nova dependência.
+  Isso evita baixar o original de 1,25 MB a cada navegação sem cache.
 - JSON-LD `Organization` descreve apenas os dados existentes de S&D, Samuel e
   David. Não há dados locais suficientes para justificar `LocalBusiness`.
 - Nenhum rastreador, token de verificação, dependência, `llms.txt` ou markup
