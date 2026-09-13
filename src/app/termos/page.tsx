@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/config/metadata";
 import Link from "next/link";
 import { LegalDocument, type LegalSection } from "@/components/legal-document";
 
-export const metadata: Metadata = {
-  title: "Termos de uso",
-  description:
-    "Condições de uso do portfólio de Samuel e David, S&D Technologies.",
-  alternates: { canonical: "/termos" },
-  robots: { index: true, follow: true },
-};
+export const metadata = pageMetadata(
+  "Termos de uso",
+  "Condições de uso do portfólio de Samuel e David, S&D Technologies.",
+  "/termos",
+);
 const sections: LegalSection[] = [
   {
     id: "sobre-o-site",

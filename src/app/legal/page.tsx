@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/config/metadata";
 import Link from "next/link";
 import { LegalFrame } from "@/components/legal-document";
 import { legalDocuments } from "@/config/legal";
 
-export const metadata: Metadata = {
-  title: "Informações legais",
-  description:
-    "Termos de uso, privacidade e tecnologias utilizadas no site da S&D Technologies.",
-  alternates: { canonical: "/legal" },
-  robots: { index: true, follow: true },
-};
+export const metadata = pageMetadata(
+  "Informações legais",
+  "Termos de uso, privacidade e tecnologias utilizadas no site da S&D Technologies.",
+  "/legal",
+);
 
 export default function LegalPage() {
   return (

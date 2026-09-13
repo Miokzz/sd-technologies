@@ -53,6 +53,8 @@ Nenhum segredo é necessário. `NEXT_PUBLIC_SITE_URL` é opcional; por padrão, 
 
 Veja `docs/evolution-2026-09-13.md` para a direção visual atual e o registro de verificação. O histórico anterior está em `docs/redesign-note.md`.
 
+As decisões de sitemap e metadata, verificações de descoberta e etapas de Search Console estão em [docs/seo-discoverability.md](docs/seo-discoverability.md).
+
 ## Movimento e documentos legais
 
 Serviços e FAQ usam `AnimatedDisclosure`: altura medida, reversão de animação, teclado, encerramento ao redimensionar e respeito a movimento reduzido. O conteúdo continua usando `details` nativo.

@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/config/metadata";
 import Link from "next/link";
 import { LegalDocument, type LegalSection } from "@/components/legal-document";
 import { legalPublication } from "@/config/legal";
 
-export const metadata: Metadata = {
-  title: "Cookies e tecnologias",
-  description:
-    "Como o site da S&D utiliza recursos do navegador e tecnologias de hospedagem.",
-  alternates: { canonical: "/cookies" },
-  robots: { index: true, follow: true },
-};
+export const metadata = pageMetadata(
+  "Cookies e tecnologias",
+  "Como o site da S&D utiliza recursos do navegador e tecnologias de hospedagem.",
+  "/cookies",
+);
 const sections: LegalSection[] = [
   {
     id: "conceito",

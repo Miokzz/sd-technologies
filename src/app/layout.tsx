@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   publisher: "S&D Technologies",
   alternates: { canonical: "/" },
   icons: {
-    icon: [{ url: "/brand/mark-transparent.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/brand/logo-original.png", type: "image/png", sizes: "1254x1254" }],
     apple: [{ url: "/brand/logo-original.png" }],
   },
   openGraph: {

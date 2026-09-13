@@ -1,14 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/config/metadata";
 import Link from "next/link";
 import { LegalDocument, type LegalSection } from "@/components/legal-document";
 
-export const metadata: Metadata = {
-  title: "Privacidade",
-  description:
-    "Informações sobre a navegação, a infraestrutura e a privacidade no site da S&D Technologies.",
-  alternates: { canonical: "/privacidade" },
-  robots: { index: true, follow: true },
-};
+export const metadata = pageMetadata(
+  "Privacidade",
+  "Informações sobre a navegação, a infraestrutura e a privacidade no site da S&D Technologies.",
+  "/privacidade",
+);
 const sections: LegalSection[] = [
   {
     id: "sobre-este-aviso",
