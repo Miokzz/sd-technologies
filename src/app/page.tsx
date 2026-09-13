@@ -1,4 +1,4 @@
-import { ExperienceSite } from "@/components/experience-site";
+import { StudioSite } from "@/components/studio-site";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <ExperienceSite />
+      <StudioSite />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
   );
